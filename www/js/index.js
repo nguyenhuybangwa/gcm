@@ -39,6 +39,7 @@ var app = {
     },
     setupPush: function() {
         console.log('calling push init');
+        alert('calling push init');
         var push = PushNotification.init({
             android: {
             },
@@ -75,6 +76,7 @@ var app = {
 
         push.on('error', function(e) {
             console.log("push error = " + e.message);
+            alert("push error = " + e.message);
         });
 
         push.on('notification', function(data) {
